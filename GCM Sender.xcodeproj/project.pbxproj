@@ -15,6 +15,7 @@
 		D51C63E71C169DD700E790E0 /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C63E61C169DD700E790E0 /* RestManager.swift */; };
 		D51C63E91C16A3E800E790E0 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C63E81C16A3E800E790E0 /* StoreManager.swift */; };
 		D596349F1C18A07400FFC596 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D596349E1C18A07400FFC596 /* Dictionary.swift */; };
+		D5A5E9D51C24A5DD009B6A9F /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5E9D41C24A5DD009B6A9F /* AppDelegateTests.swift */; };
 		D5CB0E071C2373F900A619DC /* StoreManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB0E061C2373F900A619DC /* StoreManagerTests.swift */; };
 		D5CB0E111C23746100A619DC /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB0E101C23746100A619DC /* DictionaryTests.swift */; };
 		D5CB0E131C2376C600A619DC /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB0E121C2376C600A619DC /* ViewControllerTests.swift */; };
@@ -44,6 +45,7 @@
 		D51C63E61C169DD700E790E0 /* RestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
 		D51C63E81C16A3E800E790E0 /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		D596349E1C18A07400FFC596 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		D5A5E9D41C24A5DD009B6A9F /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		D5CB0E041C2373F900A619DC /* GCM SenderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GCM SenderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5CB0E061C2373F900A619DC /* StoreManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagerTests.swift; sourceTree = "<group>"; };
 		D5CB0E081C2373F900A619DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		D5CB0E051C2373F900A619DC /* GCM SenderTests */ = {
 			isa = PBXGroup;
 			children = (
+				D5A5E9D41C24A5DD009B6A9F /* AppDelegateTests.swift */,
 				D5CB0E061C2373F900A619DC /* StoreManagerTests.swift */,
 				D5CB0E101C23746100A619DC /* DictionaryTests.swift */,
 				D5CB0E121C2376C600A619DC /* ViewControllerTests.swift */,
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5CB0E131C2376C600A619DC /* ViewControllerTests.swift in Sources */,
+				D5A5E9D51C24A5DD009B6A9F /* AppDelegateTests.swift in Sources */,
 				D5CB0E171C239A7700A619DC /* RestManagerTests.swift in Sources */,
 				D5CB0E071C2373F900A619DC /* StoreManagerTests.swift in Sources */,
 				D5CB0E111C23746100A619DC /* DictionaryTests.swift in Sources */,
@@ -489,6 +493,7 @@
 				D5CB0E0D1C2373F900A619DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
