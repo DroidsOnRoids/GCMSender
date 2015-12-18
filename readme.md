@@ -4,6 +4,7 @@
 [![Downloads](https://img.shields.io/github/downloads/DroidsOnRoids/GCMSender/total.svg)](https://github.com/DroidsOnRoids/GCMSender/releases)
 [![GitHub release](https://img.shields.io/github/release/DroidsOnRoids/GCMSender.svg)](https://github.com/DroidsOnRoids/GCMSender/releases)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/DroidsOnRoids/GCMSender/blob/master/LICENSE)
+[![](https://codecov.io/github/DroidsOnRoids/GCMSender/coverage.svg?branch=master)](https://codecov.io/github/DroidsOnRoids/GCMSender)
 
 <p align="center">
   <img src="https://github.com/DroidsOnRoids/GCMSender/blob/master/screenshot.png?raw=true" alt="App screenshot"/>
