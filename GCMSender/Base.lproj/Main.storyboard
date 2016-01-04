@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <scenes>
@@ -316,7 +317,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="GCM_Sender" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="GCMSender" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -324,7 +325,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController storyboardIdentifier="ViewController" id="B8D-0N-5wS" customClass="WindowController" customModule="GCM_Sender" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="ViewController" id="B8D-0N-5wS" customClass="WindowController" customModule="GCMSender" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" identifier="ViewController" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -342,7 +343,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="GCM_Sender" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="GCMSender" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="548" height="478"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -380,7 +381,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="gcmSenderAction:" target="XfG-lQ-9wD" id="bso-sB-8iJ"/>
+                                    <action selector="gcmSenderAction:" target="XfG-lQ-9wD" id="i50-r0-ZrT"/>
                                 </connections>
                             </button>
                             <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxA-4J-ebn">
@@ -400,7 +401,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="256" height="350"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <size key="minSize" width="256" height="350"/>
+                                                            <size key="minSize" width="241" height="350"/>
                                                             <size key="maxSize" width="463" height="10000000"/>
                                                             <attributedString key="textStorage">
                                                                 <fragment>
@@ -423,7 +424,7 @@
                                                                 </fragment>
                                                             </attributedString>
                                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <size key="minSize" width="256" height="350"/>
+                                                            <size key="minSize" width="241" height="350"/>
                                                             <size key="maxSize" width="463" height="10000000"/>
                                                         </textView>
                                                     </subviews>
@@ -434,7 +435,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Q88-tn-qX3">
-                                                    <rect key="frame" x="241" y="1" width="16" height="350"/>
+                                                    <rect key="frame" x="242" y="1" width="15" height="350"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>
@@ -460,10 +461,10 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="254" height="350"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <size key="minSize" width="254" height="350"/>
+                                                            <size key="minSize" width="239" height="350"/>
                                                             <size key="maxSize" width="463" height="10000000"/>
                                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <size key="minSize" width="254" height="350"/>
+                                                            <size key="minSize" width="239" height="350"/>
                                                             <size key="maxSize" width="463" height="10000000"/>
                                                         </textView>
                                                     </subviews>
@@ -474,7 +475,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ztk-p6-Xel">
-                                                    <rect key="frame" x="239" y="1" width="16" height="350"/>
+                                                    <rect key="frame" x="240" y="1" width="15" height="350"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>
@@ -510,10 +511,10 @@
                         <accessibility description="GCM Sender"/>
                     </view>
                     <connections>
-                        <outlet property="apiKeyField" destination="C9n-5h-mIM" id="dnw-7V-jr9"/>
-                        <outlet property="payLoadTextView" destination="Nb0-Vb-494" id="NjN-xP-Yh2"/>
-                        <outlet property="recipientField" destination="l0F-gS-F00" id="oxO-uX-ime"/>
-                        <outlet property="responseTextView" destination="V8y-Gb-SBZ" id="g3q-nc-KEg"/>
+                        <outlet property="apiKeyField" destination="C9n-5h-mIM" id="dYe-SF-Aq5"/>
+                        <outlet property="payLoadTextView" destination="Nb0-Vb-494" id="wxg-mU-EYF"/>
+                        <outlet property="recipientField" destination="l0F-gS-F00" id="ZY2-RT-WPe"/>
+                        <outlet property="responseTextView" destination="V8y-Gb-SBZ" id="ep6-vP-cYN"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

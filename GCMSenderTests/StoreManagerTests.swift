@@ -8,7 +8,7 @@
 
 import XCTest
 
-@testable import GCM_Sender
+@testable import GCMSender
 
 class StoreManagerTests: XCTestCase {
     

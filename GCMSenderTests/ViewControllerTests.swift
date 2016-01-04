@@ -9,7 +9,7 @@
 import Cocoa
 import XCTest
 
-@testable import GCM_Sender
+@testable import GCMSender
 
 class ViewControllerTests: XCTestCase {
     
