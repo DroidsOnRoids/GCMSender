@@ -41,7 +41,7 @@ class StoreManager {
     
     static func clearStore() {
         if let bundleIdentifier = NSBundle.mainBundle().bundleIdentifier {
-            NSUserDefaults.standardUserDefaults().removePersistentDomainForName(bundleIdentifier)
+            UserDefaults.standardUserDefaults().removePersistentDomainForName(bundleIdentifier)
         }
     }
 }
