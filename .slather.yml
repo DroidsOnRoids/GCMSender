@@ -1,6 +1,4 @@
-coverage_service: terminal
-xcodeproj: ./GCMSender.xcodeproj
-source_directory: ./GCMSender
-build_directory: ./build
-ignore:
-  - "./Pods/*"
+ci_service: travis_ci
+coverage_service: coveralls
+xcodeproj: GCMSender.xcodeproj
+source_directory: GCMSender

@@ -34,10 +34,10 @@ class ViewController: NSViewController {
 
     @IBAction func gcmSenderAction(sender: AnyObject) {
         self.storeValueFromFields()
-        var requestBody = self.prepareRequestBody()
+        var requestBody = JsonHelper.prepareRequestBody(recipientField.stringValue)
         
         if let payLoadText = payLoadTextView?.string {
-            if let payLoadDictionary = convertStringToDictionary(payLoadText) {
+            if let payLoadDictionary = JsonHelper.convertStringToDictionary(payLoadText) {
                 requestBody = requestBody + payLoadDictionary
             }
         }
@@ -48,36 +48,11 @@ class ViewController: NSViewController {
         }
     }
     
-    func convertStringToDictionary(text: String) -> [String:AnyObject]? {
-        if let data = text.dataUsingEncoding(NSUTF8StringEncoding) {
-            do {
-                let json = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [String:AnyObject]
-                return json
-            } catch {
-                let alert: NSAlert = NSAlert()
-                alert.messageText = "JSON parsing error"
-                alert.informativeText = "Error"
-                alert.alertStyle = .CriticalAlertStyle
-                alert.addButtonWithTitle("OK")
-            }
-        }
-        return nil
-    }
-    
     func storeValueFromFields() {
         StoreManager.apiKey = self.apiKeyField.stringValue
         StoreManager.recipientToken = self.recipientField.stringValue
     }
-    
-    func prepareRequestBody() -> [String:AnyObject] {
-        var requestBody = [String : AnyObject]()
-        
-        requestBody = [
-            "to" : self.recipientField.stringValue
-        ]
-        
-        return requestBody;
-    }
+
 }
 
 class WindowController: NSWindowController {

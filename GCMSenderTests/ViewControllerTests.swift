@@ -20,9 +20,9 @@ class ViewControllerTests: XCTestCase {
         super.setUp()
         
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        viewController = storyboard.instantiateControllerWithIdentifier("ViewController") as? ViewController
+        viewController = storyboard.instantiateControllerWithIdentifier("ViewControllerStoryboardId") as? ViewController
+        let _ = viewController?.view
         
-        _ = viewController?.view
     }
     
     func testApiKeyFieldOutlet() {
@@ -41,16 +41,6 @@ class ViewControllerTests: XCTestCase {
         XCTAssertNotNil(viewController?.responseTextView, "responseTextView should be connected")
     }
     
-    func testConvertStringToDictionary() {
-        let jsonString = "{\"name\":\"John Johnson\",\"street\":\"Oslo West 16\",\"phone\":\"555 1234567\"}"
-        
-        if let parsedJsonDictionary = viewController?.convertStringToDictionary(jsonString) {
-           XCTAssertNotNil(parsedJsonDictionary, "JSON string not parsed")
-        } else {
-            XCTFail()
-        }
-    }
-    
     func testStoreValueFromField() {
         viewController?.apiKeyField.stringValue = stringValue
         viewController?.recipientField.stringValue = stringValue
@@ -61,13 +51,4 @@ class ViewControllerTests: XCTestCase {
         XCTAssertEqual(StoreManager.recipientToken, stringValue)
     }
     
-    func testRequestBody() {
-        let requestBody = [
-            "to" : stringValue
-        ]
-        viewController?.recipientField.stringValue = stringValue
-        let generatedRequestBody = viewController?.prepareRequestBody() as! [String:String]
-        
-        XCTAssertEqual(requestBody, generatedRequestBody)
-    }
 }

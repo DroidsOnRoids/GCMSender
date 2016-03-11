@@ -20,6 +20,8 @@
 		D534B5031C3AA68E00B8B7A5 /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534B4FE1C3AA68E00B8B7A5 /* RestManager.swift */; };
 		D534B5041C3AA68E00B8B7A5 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534B4FF1C3AA68E00B8B7A5 /* StoreManager.swift */; };
 		D534B5051C3AA68E00B8B7A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534B5001C3AA68E00B8B7A5 /* ViewController.swift */; };
+		D5D3E4811C92BC4B00915613 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3E4801C92BC4B00915613 /* JsonHelper.swift */; };
+		D5D3E4831C92BCBA00915613 /* JsonHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3E4821C92BCBA00915613 /* JsonHelperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		D534B4FE1C3AA68E00B8B7A5 /* RestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
 		D534B4FF1C3AA68E00B8B7A5 /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		D534B5001C3AA68E00B8B7A5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5D3E4801C92BC4B00915613 /* JsonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		D5D3E4821C92BCBA00915613 /* JsonHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHelperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 				D534B4991C3A9C3E00B8B7A5 /* Assets.xcassets */,
 				D534B49D1C3A9C3E00B8B7A5 /* Info.plist */,
 				D534B4F81C3AA4DE00B8B7A5 /* Main.storyboard */,
+				D5D3E4801C92BC4B00915613 /* JsonHelper.swift */,
 			);
 			path = GCMSender;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				D534B4E71C3AA1DD00B8B7A5 /* RestManagerTests.swift */,
 				D534B4E81C3AA1DD00B8B7A5 /* StoreManagerTests.swift */,
 				D534B4E91C3AA1DD00B8B7A5 /* ViewControllerTests.swift */,
+				D5D3E4821C92BCBA00915613 /* JsonHelperTests.swift */,
 				D534B4DF1C3AA1C400B8B7A5 /* Info.plist */,
 			);
 			path = GCMSenderTests;
@@ -292,6 +298,7 @@
 				D534B5051C3AA68E00B8B7A5 /* ViewController.swift in Sources */,
 				D534B5031C3AA68E00B8B7A5 /* RestManager.swift in Sources */,
 				D534B5041C3AA68E00B8B7A5 /* StoreManager.swift in Sources */,
+				D5D3E4811C92BC4B00915613 /* JsonHelper.swift in Sources */,
 				D534B5011C3AA68E00B8B7A5 /* AppDelegate.swift in Sources */,
 				D534B5021C3AA68E00B8B7A5 /* Dictionary.swift in Sources */,
 			);
@@ -302,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D534B4EE1C3AA1DD00B8B7A5 /* ViewControllerTests.swift in Sources */,
+				D5D3E4831C92BCBA00915613 /* JsonHelperTests.swift in Sources */,
 				D534B4EA1C3AA1DD00B8B7A5 /* AppDelegateTests.swift in Sources */,
 				D534B4ED1C3AA1DD00B8B7A5 /* StoreManagerTests.swift in Sources */,
 				D534B4EB1C3AA1DD00B8B7A5 /* DictionaryTests.swift in Sources */,
