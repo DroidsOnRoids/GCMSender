@@ -10,49 +10,55 @@ import Cocoa
 import Alamofire
 
 class ViewController: NSViewController {
-    
+
     @IBOutlet var apiKeyField: NSTextField!
     @IBOutlet var recipientField: NSTextField!
 
-    @IBOutlet var payLoadTextView: NSTextView!
+    @IBOutlet var payloadTextView: NSTextView!
     @IBOutlet var responseTextView: NSTextView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         apiKeyField.stringValue = StoreManager.apiKey
         recipientField.stringValue = StoreManager.recipientToken
-        
-        payLoadTextView.automaticQuoteSubstitutionEnabled = false
-        payLoadTextView.automaticDashSubstitutionEnabled = false
-        payLoadTextView.automaticTextReplacementEnabled = false
-        
+
+        payloadTextView.automaticQuoteSubstitutionEnabled = false
+        payloadTextView.automaticDashSubstitutionEnabled = false
+        payloadTextView.automaticTextReplacementEnabled = false
+
         responseTextView.automaticQuoteSubstitutionEnabled = false
         responseTextView.automaticDashSubstitutionEnabled = false
         responseTextView.automaticTextReplacementEnabled = false
     }
 
     @IBAction func gcmSenderAction(sender: AnyObject) {
-        self.storeValueFromFields()
+        storeValueFromFields()
         var requestBody = JsonHelper.prepareRequestBody(recipientField.stringValue)
-        
-        if let payLoadText = payLoadTextView?.string {
-            if let payLoadDictionary = JsonHelper.convertStringToDictionary(payLoadText) {
-                requestBody = requestBody + payLoadDictionary
-            }
+
+        if let payload = preparePayload() {
+            requestBody = requestBody + payload
         }
-        
+
         RestManager.performRequest(apiKeyField.stringValue, parameters: requestBody) {
             (gcmResponse: Response<AnyObject, NSError>) in
             self.responseTextView.string = gcmResponse.result.debugDescription
         }
     }
-    
+
     func storeValueFromFields() {
         StoreManager.apiKey = self.apiKeyField.stringValue
         StoreManager.recipientToken = self.recipientField.stringValue
     }
 
+    func preparePayload() -> [String: AnyObject]? {
+        if let payloadText = payloadTextView?.string,
+            let payloadDictionary = JsonHelper.convertStringToDictionary(payloadText) {
+                return payloadDictionary
+        }
+
+        return nil
+    }
 }
 
 class WindowController: NSWindowController {

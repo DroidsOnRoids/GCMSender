@@ -33,8 +33,8 @@ class ViewControllerTests: XCTestCase {
         XCTAssertNotNil(viewController?.recipientField, "recipientField should be connected")
     }
     
-    func testPayLoadTextViewOutlet() {
-        XCTAssertNotNil(viewController?.payLoadTextView, "payLoadTextView should be connected")
+    func testpayloadTextViewOutlet() {
+        XCTAssertNotNil(viewController?.payloadTextView, "payloadTextView should be connected")
     }
     
     func testResponseTextViewOutlet() {
@@ -49,6 +49,18 @@ class ViewControllerTests: XCTestCase {
         
         XCTAssertEqual(StoreManager.apiKey, stringValue)
         XCTAssertEqual(StoreManager.recipientToken, stringValue)
+    }
+
+    func testPreparePayloadNil() {
+        viewController?.payloadTextView.string = ""
+        XCTAssertNil(viewController?.preparePayload())
+    }
+
+    func testPreparePayload() {
+        let expected  = ["key" : "value"]
+        viewController?.payloadTextView.string = "{\"key\":\"value\"}"
+        let result = viewController?.preparePayload() as! [String: String]
+        XCTAssertEqual(result, expected)
     }
     
 }

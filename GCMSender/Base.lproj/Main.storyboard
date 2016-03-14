@@ -512,7 +512,7 @@
                     </view>
                     <connections>
                         <outlet property="apiKeyField" destination="C9n-5h-mIM" id="dYe-SF-Aq5"/>
-                        <outlet property="payLoadTextView" destination="Nb0-Vb-494" id="wxg-mU-EYF"/>
+                        <outlet property="payloadTextView" destination="Nb0-Vb-494" id="G36-MT-UGV"/>
                         <outlet property="recipientField" destination="l0F-gS-F00" id="ZY2-RT-WPe"/>
                         <outlet property="responseTextView" destination="V8y-Gb-SBZ" id="ep6-vP-cYN"/>
                     </connections>

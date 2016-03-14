@@ -24,9 +24,7 @@ class JsonHelperTests: XCTestCase {
     func testRequestBody() {
         let stringValue = "some string value"
         
-        let requestBody = [
-            "to" : stringValue
-        ]
+        let requestBody = ["to" : stringValue]
         
         let generatedRequestBody = JsonHelper.prepareRequestBody(stringValue) as! [String:String]
         
