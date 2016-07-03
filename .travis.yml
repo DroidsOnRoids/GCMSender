@@ -3,5 +3,5 @@ osx_image: xcode8
 sudo: false
 before_install: gem install slather -N
 install: pod install
-script: xcodebuild -scheme GCMSender -workspace GCMSender.xcworkspace -enableCodeCoverage YES build test GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+script: xcodebuild -scheme GCMSender -project GCMSender.xcodeproj -enableCodeCoverage YES build test GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 after_success: slather

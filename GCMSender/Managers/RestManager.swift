@@ -14,7 +14,7 @@ class RestManager {
 
   class func performRequest(apiKey: String,
                             paremeters: [String: AnyObject],
-                            completion: ((String)?) -> Void) throws {
+                            completion: ((String)?) -> Void) {
 
     guard let url = URL(string: apiURL) else {
       completion(nil)
