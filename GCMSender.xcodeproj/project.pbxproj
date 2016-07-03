@@ -14,12 +14,12 @@
 		D534B4FA1C3AA4DE00B8B7A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D534B4F81C3AA4DE00B8B7A5 /* Main.storyboard */; };
 		D534B4FB1C3AA53D00B8B7A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D534B4991C3A9C3E00B8B7A5 /* Assets.xcassets */; };
 		D534B5011C3AA68E00B8B7A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534B4FC1C3AA68E00B8B7A5 /* AppDelegate.swift */; };
-		D534B5021C3AA68E00B8B7A5 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534B4FD1C3AA68E00B8B7A5 /* DictionaryExtension.swift */; };
-		D534B5031C3AA68E00B8B7A5 /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534B4FE1C3AA68E00B8B7A5 /* RestManager.swift */; };
-		D534B5041C3AA68E00B8B7A5 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534B4FF1C3AA68E00B8B7A5 /* StoreManager.swift */; };
-		D534B5051C3AA68E00B8B7A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534B5001C3AA68E00B8B7A5 /* ViewController.swift */; };
-		D5D3E4811C92BC4B00915613 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3E4801C92BC4B00915613 /* JsonHelper.swift */; };
 		D5D3E4831C92BCBA00915613 /* JsonHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3E4821C92BCBA00915613 /* JsonHelperTests.swift */; };
+		D5F6F4231D2991030083268B /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6F41B1D2991030083268B /* DictionaryExtension.swift */; };
+		D5F6F4241D2991030083268B /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6F41D1D2991030083268B /* JsonHelper.swift */; };
+		D5F6F4251D2991030083268B /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6F41F1D2991030083268B /* RestManager.swift */; };
+		D5F6F4261D2991030083268B /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6F4201D2991030083268B /* StoreManager.swift */; };
+		D5F6F4271D2991030083268B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6F4221D2991030083268B /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,12 +45,12 @@
 		D534B4E91C3AA1DD00B8B7A5 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		D534B4F91C3AA4DE00B8B7A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D534B4FC1C3AA68E00B8B7A5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D534B4FD1C3AA68E00B8B7A5 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
-		D534B4FE1C3AA68E00B8B7A5 /* RestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
-		D534B4FF1C3AA68E00B8B7A5 /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
-		D534B5001C3AA68E00B8B7A5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D5D3E4801C92BC4B00915613 /* JsonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 		D5D3E4821C92BCBA00915613 /* JsonHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHelperTests.swift; sourceTree = "<group>"; };
+		D5F6F41B1D2991030083268B /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		D5F6F41D1D2991030083268B /* JsonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		D5F6F41F1D2991030083268B /* RestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
+		D5F6F4201D2991030083268B /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		D5F6F4221D2991030083268B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,15 +86,12 @@
 		D534B4971C3A9C3E00B8B7A5 /* GCMSender */ = {
 			isa = PBXGroup;
 			children = (
+				D5F6F41A1D2991030083268B /* Extensions */,
+				D5F6F41C1D2991030083268B /* Helpers */,
+				D5F6F41E1D2991030083268B /* Managers */,
+				D5F6F4211D2991030083268B /* View Controllers */,
 				D534B4FC1C3AA68E00B8B7A5 /* AppDelegate.swift */,
-				D534B4FD1C3AA68E00B8B7A5 /* DictionaryExtension.swift */,
-				D534B4FE1C3AA68E00B8B7A5 /* RestManager.swift */,
-				D534B4FF1C3AA68E00B8B7A5 /* StoreManager.swift */,
-				D534B5001C3AA68E00B8B7A5 /* ViewController.swift */,
-				D534B4991C3A9C3E00B8B7A5 /* Assets.xcassets */,
-				D534B49D1C3A9C3E00B8B7A5 /* Info.plist */,
-				D534B4F81C3AA4DE00B8B7A5 /* Main.storyboard */,
-				D5D3E4801C92BC4B00915613 /* JsonHelper.swift */,
+				D5F6F4281D29910D0083268B /* Resources */,
 			);
 			path = GCMSender;
 			sourceTree = "<group>";
@@ -110,6 +107,49 @@
 				D534B4DF1C3AA1C400B8B7A5 /* Info.plist */,
 			);
 			path = GCMSenderTests;
+			sourceTree = "<group>";
+		};
+		D5F6F41A1D2991030083268B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6F41B1D2991030083268B /* DictionaryExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D5F6F41C1D2991030083268B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6F41D1D2991030083268B /* JsonHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D5F6F41E1D2991030083268B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6F41F1D2991030083268B /* RestManager.swift */,
+				D5F6F4201D2991030083268B /* StoreManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D5F6F4211D2991030083268B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6F4221D2991030083268B /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D5F6F4281D29910D0083268B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D534B4991C3A9C3E00B8B7A5 /* Assets.xcassets */,
+				D534B49D1C3A9C3E00B8B7A5 /* Info.plist */,
+				D534B4F81C3AA4DE00B8B7A5 /* Main.storyboard */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		E26228CB6CBD2DBF44C4B4BE /* Frameworks */ = {
@@ -213,12 +253,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D534B5051C3AA68E00B8B7A5 /* ViewController.swift in Sources */,
-				D534B5031C3AA68E00B8B7A5 /* RestManager.swift in Sources */,
-				D534B5041C3AA68E00B8B7A5 /* StoreManager.swift in Sources */,
-				D5D3E4811C92BC4B00915613 /* JsonHelper.swift in Sources */,
+				D5F6F4271D2991030083268B /* ViewController.swift in Sources */,
+				D5F6F4241D2991030083268B /* JsonHelper.swift in Sources */,
+				D5F6F4251D2991030083268B /* RestManager.swift in Sources */,
+				D5F6F4261D2991030083268B /* StoreManager.swift in Sources */,
 				D534B5011C3AA68E00B8B7A5 /* AppDelegate.swift in Sources */,
-				D534B5021C3AA68E00B8B7A5 /* DictionaryExtension.swift in Sources */,
+				D5F6F4231D2991030083268B /* DictionaryExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

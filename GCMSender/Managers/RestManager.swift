@@ -10,14 +10,13 @@ import Foundation
 
 class RestManager {
 
-  private static let GCMSendUrl = "https://gcm-http.googleapis.com/gcm/send";
-
+  private static let apiURL = "https://gcm-http.googleapis.com/gcm/send";
 
   class func performRequest(apiKey: String,
                             paremeters: [String: AnyObject],
                             completion: ((String)?) -> Void) throws {
 
-    guard let url = URL(string: GCMSendUrl) else {
+    guard let url = URL(string: apiURL) else {
       completion(nil)
       return
     }
