@@ -7,21 +7,43 @@
 //
 
 import Foundation
-import Alamofire
 
-class RestManager: NSObject {
-    
-    private static let GCMSendUrl = "https://gcm-http.googleapis.com/gcm/send";
-    
-    class func performRequest(apiKey: String, parameters: Dictionary<String, AnyObject>, completion: (result: Response<AnyObject, NSError>) -> Void) {
-        let headers = [
-            "Content-Type": "application/json",
-            "Authorization": "key=" + apiKey
-        ]
-        
-        Alamofire.request(.POST, GCMSendUrl, parameters: parameters, encoding: .JSON, headers: headers)
-            .responseJSON { response -> Void in
-                completion(result: response)
-        }
+class RestManager {
+
+  private static let GCMSendUrl = "https://gcm-http.googleapis.com/gcm/send";
+
+
+  class func performRequest(apiKey: String,
+                            paremeters: [String: AnyObject],
+                            completion: ((String)?) -> Void) throws {
+
+    guard let url = URL(string: GCMSendUrl) else {
+      completion(nil)
+      return
     }
+
+    var request = URLRequest(url: url)
+    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.addValue("key=\(apiKey)", forHTTPHeaderField: "Authorization")
+
+
+    URLSession.shared().dataTask(with:request) { (data, response, error) in
+      var responseString = ""
+
+      if let data = data,
+        let dataString = String(data: data, encoding: String.Encoding.utf8) {
+        responseString = dataString
+      }
+
+      if let erroDescription = error?.localizedDescription
+        where responseString.characters.count == 0 {
+        responseString = erroDescription
+      }
+
+      completion(responseString)
+    }.resume()
+
+
+  }
+
 }

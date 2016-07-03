@@ -9,39 +9,45 @@
 import Foundation
 
 class StoreManager {
-    
-    private static let UserDefaults = NSUserDefaults.standardUserDefaults()
-    private static let ApiKeyStoreName = "ApiKeyStore"
-    private static let RecipientTokenStoreName = "RecipientTokenStore"
-    
-    static var apiKey: String {
-        get {
-            if let apiKeyValue = UserDefaults.objectForKey(ApiKeyStoreName) {
-                return apiKeyValue as! String
-            }
-            return ""
-        }
-        
-        set(newApiKey) {
-            UserDefaults.setObject(newApiKey, forKey: ApiKeyStoreName)
-        }
+
+  private enum Keys: String {
+    case apiKeyStore
+    case recipientTokenStore
+  }
+
+  private static let UserDefaults = Foundation.UserDefaults.standard()
+
+  static var apiKey: String {
+    get {
+      return getValue(key: Keys.apiKeyStore.rawValue)
     }
-    static var recipientToken: String {
-        get {
-            if let apiKeyValue = UserDefaults.objectForKey(RecipientTokenStoreName) {
-                return apiKeyValue as! String
-            }
-            return ""
-        }
-        
-        set(newApiKey) {
-            UserDefaults.setObject(newApiKey, forKey: RecipientTokenStoreName)
-        }
+
+    set(newApiKey) {
+      UserDefaults.set(newApiKey, forKey: Keys.apiKeyStore.rawValue)
     }
-    
-    static func clearStore() {
-        if let bundleIdentifier = NSBundle.mainBundle().bundleIdentifier {
-            UserDefaults.removePersistentDomainForName(bundleIdentifier)
-        }
+  }
+
+  static var recipientToken: String {
+    get {
+      return getValue(key: Keys.recipientTokenStore.rawValue)
     }
+
+    set(newApiKey) {
+      UserDefaults.set(newApiKey, forKey: Keys.recipientTokenStore.rawValue)
+    }
+  }
+
+  private static func getValue(key: String) -> String {
+    guard let storedValue = UserDefaults.string(forKey: key) else {
+      return ""
+    }
+
+    return storedValue
+  }
+
+  static func clearStore() {
+    if let bundleIdentifier = Bundle.main().bundleIdentifier {
+      UserDefaults.removePersistentDomain(forName: bundleIdentifier)
+    }
+  }
 }

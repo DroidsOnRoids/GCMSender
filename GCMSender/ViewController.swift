@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import Alamofire
 
 class ViewController: NSViewController {
 
@@ -23,16 +22,16 @@ class ViewController: NSViewController {
         apiKeyField.stringValue = StoreManager.apiKey
         recipientField.stringValue = StoreManager.recipientToken
 
-        payloadTextView.automaticQuoteSubstitutionEnabled = false
-        payloadTextView.automaticDashSubstitutionEnabled = false
-        payloadTextView.automaticTextReplacementEnabled = false
+        payloadTextView.isAutomaticQuoteSubstitutionEnabled = false
+        payloadTextView.isAutomaticDashSubstitutionEnabled = false
+        payloadTextView.isAutomaticTextReplacementEnabled = false
 
-        responseTextView.automaticQuoteSubstitutionEnabled = false
-        responseTextView.automaticDashSubstitutionEnabled = false
-        responseTextView.automaticTextReplacementEnabled = false
+        responseTextView.isAutomaticQuoteSubstitutionEnabled = false
+        responseTextView.isAutomaticDashSubstitutionEnabled = false
+        responseTextView.isAutomaticTextReplacementEnabled = false
     }
 
-    @IBAction func gcmSenderAction(sender: AnyObject) {
+    @IBAction func gcmSenderAction(_ sender: AnyObject) {
         storeValueFromFields()
         var requestBody = JsonHelper.prepareRequestBody(recipientField.stringValue)
 
@@ -40,15 +39,14 @@ class ViewController: NSViewController {
             requestBody = requestBody + payload
         }
 
-        RestManager.performRequest(apiKeyField.stringValue, parameters: requestBody) {
-            (gcmResponse: Response<AnyObject, NSError>) in
-            self.responseTextView.string = gcmResponse.result.debugDescription
-        }
+      try! RestManager.performRequest(apiKey: apiKeyField.stringValue, paremeters: requestBody) {
+        self.responseTextView.string = $0
+      }
     }
 
     func storeValueFromFields() {
-        StoreManager.apiKey = self.apiKeyField.stringValue
-        StoreManager.recipientToken = self.recipientField.stringValue
+        StoreManager.apiKey = apiKeyField.stringValue
+        StoreManager.recipientToken = recipientField.stringValue
     }
 
     func preparePayload() -> [String: AnyObject]? {
@@ -63,6 +61,6 @@ class ViewController: NSViewController {
 
 class WindowController: NSWindowController {
     override func windowDidLoad() {
-        self.window?.title = "GCM Sender"
+        window?.title = "GCM Sender"
     }
 }
